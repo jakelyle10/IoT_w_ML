@@ -39,7 +39,8 @@ void loop()
 	    leds.setColorRGB(0, 255, 0, 0);                         // red
 	}
 	
-  	if (RangeInCentimeters <= RangeInCentimetersPrevious + 3 && RangeInCentimeters >= RangeInCentimetersPrevious - 3){
+
+  if (RangeInCentimeters <= RangeInCentimetersPrevious + 3 && RangeInCentimeters >= RangeInCentimetersPrevious - 3){
     	ticker = ticker +1;
   	}
 	else{
