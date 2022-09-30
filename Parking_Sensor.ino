@@ -39,9 +39,12 @@ void loop()
 	    leds.setColorRGB(0, 255, 0, 0);                         // red
 	}
 	
-  	if (RangeInCentimeters < RangeInCentimetersPrevious + 2 || RangeInCentimeters > RangeInCentimetersPrevious - 2){
+  	if (RangeInCentimeters < RangeInCentimetersPrevious + 3 || RangeInCentimeters > RangeInCentimetersPrevious - 3){
     ticker = ticker +1;
   	}
+	else{
+	ticker = 0;
+	}
 
   	if(ticker == 300){
 	Particle.publish("parking", "parked", PRIVATE);
