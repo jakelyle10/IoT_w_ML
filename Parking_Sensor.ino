@@ -7,10 +7,14 @@
 
 #include <Grove-Ultrasonic-Ranger.h> // Ultrasonic Ranger library
 #include <Grove_ChainableLED.h>     // RGB LED library
+#include <twilio.h>					// IDK
+
 
 float distance1 = 15.0;             // car distance boundary
 int ticker = 0;                 // ticker counter to see how long the car is parked
+// String body = "Hey, your car is parked!";
 
+// Twilio text();
 Ultrasonic ultrasonic(D4);          // Ultrasonic object constructor
 ChainableLED leds(D2, D3, 1);       // LED object constructor
 
@@ -39,8 +43,7 @@ void loop()
 	    leds.setColorRGB(0, 255, 0, 0);                         // red
 	}
 	
-
-  if (RangeInCentimeters <= RangeInCentimetersPrevious + 3 && RangeInCentimeters >= RangeInCentimetersPrevious - 3){
+  	if (RangeInCentimeters <= RangeInCentimetersPrevious + 3 && RangeInCentimeters >= RangeInCentimetersPrevious - 3){
     	ticker = ticker +1;
   	}
 	else{
@@ -49,6 +52,8 @@ void loop()
 
   	if(ticker == 300){
 		Particle.publish("parking", "parked", PRIVATE);
+		// Particle.publish("twilio_sms", body, PRIVATE);
+		// text.message('+16513438004', '+13854858611', body)
 		ticker = 0;
   	}
 
