@@ -1,0 +1,1 @@
+This is a simple project to try out the light meter sensor, and checks for the current light level and then publishes the event to particle if it reads above 50.
