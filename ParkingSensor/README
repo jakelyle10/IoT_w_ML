@@ -1,0 +1,1 @@
+This is a parking sensor file, that uses the ultrasonic distance finder to read how far away an object is. If an object is too close, the LED light changes from green to red. If the distance hasn't changed (+/- 3) in 30 seconds, it assumes you're parked and sends you a text telling you so.
