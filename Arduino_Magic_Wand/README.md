@@ -1,0 +1,1 @@
+This is another arduino project from the TinyML book. It attempts to try and turn your arduino & board into a 'magic wand;' just try and draw a number (0-9) and it will output it's prediction of what you wrote.
