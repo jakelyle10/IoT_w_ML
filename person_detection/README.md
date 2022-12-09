@@ -1,0 +1,1 @@
+This is another project from the TinyML Book, using the Arduino Nano BLE Sense & the OV7675 camera module. The camera takes a picture of whatever is in front of it, and the arduino runs a NN to detect if there is a person in the image or not.
